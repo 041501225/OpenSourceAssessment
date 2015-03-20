@@ -1,0 +1,91 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package multiplication;
+
+/**
+ *
+ * @author 041501225
+ */
+public class Multiplication {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int row = 1;
+        int collumn = 1;
+        int number;
+        int firstLine = 0;
+        while (collumn < 13) {
+            number = row * collumn;
+            if (collumn == 1) {
+                if (firstLine == 0) {
+                    firstLine = 1;
+                    System.out.println("×     1      2      3      4      5      6      7      8      9      10     11     12");
+                }
+            }
+            if (row == 1){
+                if (collumn != 1) {
+                    if (collumn < 10) {
+                        System.out.print(collumn+"     ");
+                    }
+                    else {
+                        System.out.print(collumn+"    ");
+                    }
+                }
+                else {
+                    System.out.print(collumn+"    ");
+                }                
+            }
+            if (row != collumn) {
+                if (row+1 == collumn) {
+                    if (number < 10) {
+                        System.out.print(number+"     ");
+                    }
+                    else if (number < 100) {
+                        System.out.print(number+"    ");
+                    }
+                    else {
+                        System.out.print(number+"   ");
+                    }
+                }
+                else {
+                    if (number < 10) {
+                        System.out.print(number+"      ");
+                    }
+                    else if (number < 100) {
+                        System.out.print(number+"     ");
+                    }
+                    else {
+                        System.out.print(number+"    ");
+                    }
+                }    
+            row++;
+            }  
+            else {
+                if (number < 10) {
+                    System.out.print("("+number+")     ");    
+                }
+                else if (number < 100) {
+                    System.out.print("("+number+")    ");    
+                }
+                else {
+                    System.out.print("("+number+")   ");
+                }
+            row++;    
+            }
+            if (row == 13) {
+                System.out.println();
+                row = 1;
+                collumn++;
+            }
+        }
+    }
+}
+    
+
+    
+
